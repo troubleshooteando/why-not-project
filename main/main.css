@@ -1,0 +1,14 @@
+header {
+    background-color: rgb(19, 19, 19);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+
+header li{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
