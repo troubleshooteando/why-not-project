@@ -1,3 +1,22 @@
+@font-face {
+    font-family: koara-font;
+    src: url(../fuentes/Rosario\ Nocera\ -\ Koara\ free\ Bold.otf);
+}
+
+
+
+
+html{
+
+} 
+
+body{
+    font-family: koara-font;
+}
+
+
+
+
 header.cabecera{
     background-color: rgb(19, 19, 19);
     position: fixed;
@@ -7,29 +26,48 @@ header.cabecera{
     color: white;
 }
 
-#header-imagen{
-    float: left;
-    padding: 2em;
+#columna-imagen-elementos{
+    margin: 0px;
+    padding: 0px;
 }
 
-#header-lista{
+#header-imagen{
+    padding: 0;
+    margin: 0;
+    max-width: 20%;
+    border: 2px green solid;
+    padding-left: 0;
+    padding-top: 0;
+    float: left;
+
+
+    img{
+        height: auto;
+        max-width: 100%;
+        width: 25em;
+    }    
+}
+
+#header-lista-elementos{
     list-style-type: none;
-    text-decoration:none;
+    text-decoration: none;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     text-align: center;
-    padding: 0;
+    padding: .7em;
     margin: 0;
     border: 2px white solid;
+    max-width: 50%;
 
     li{
         margin-left: 0;
 
         a{
-            color: white;
+            color: black;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 20px;
+            background-color: #F9E041;
         }
     }
 }
