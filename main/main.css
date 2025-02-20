@@ -14,7 +14,7 @@ body {
 }
 
 header.cabecera {
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(24, 23, 23);
     position: absolute;
     top: 0;
     left: 0;
@@ -72,6 +72,15 @@ header.cabecera {
     padding: 0.9em;
     border-radius: 10px;
     display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+   
+}
+
+/*intento de hover*/
+
+#header-lista-elementos li a:hover {
+    background-color: black;
+    color: #F9E041;
 }
 
 /* Ajuste para pantallas medianas */
