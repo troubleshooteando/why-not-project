@@ -7,10 +7,24 @@
     src: url(../fuentes/Rosario\ Nocera\ -\ Koara\ free\ Bold.otf);
 }
 
-body {
+body{
     font-family: koara-font;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1;
 }
 
 header.cabecera {
@@ -73,27 +87,82 @@ header.cabecera {
     border-radius: 10px;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
-   
 }
 
-/*intento de hover*/
 
 #header-lista-elementos li a:hover {
     background-color: black;
     color: #F9E041;
 }
 
+footer {
+    background-color: rgb(24, 23, 23);
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+footer ul#footer-lista-elementos {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 1.6em;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+footer li#footer-li-1 {
+    margin-right: 100em;
+}
+
+footer li#footer-li-3 {
+    margin-left: auto;
+}
+
+footer li#footer-li-1 a#Developer,
+footer li#footer-li-3 a#Developer {
+    color: #F9E041;
+}
+
+#footer-instagram a img {
+    margin-left: auto;
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+
+
+
 /* Ajuste para pantallas medianas */
 @media (max-width: 900px) {
     #header-imagen{
         margin-bottom: 1em;
+        width: 95%;
     }
     #header-elementos {
         justify-content: center;
         width: 100%;
+        padding-bottom: 1em;
     }
     #header-lista-elementos {
         gap: 1em;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-li-1,
+    #footer-li-3,
+    #footer-instagram {
+        margin: 1em 0;
     }
 }
 
@@ -117,5 +186,12 @@ header.cabecera {
         flex-direction: column;
         align-items: center;
     }
+
+    #footer-lista-elementos {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
 }
 
