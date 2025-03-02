@@ -13,97 +13,100 @@ body {
     font-family: koara-font;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
 }
 
 /* Cabecera */
 header {
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(19, 19, 19);
     padding: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column; /* En pantallas grandes, los elementos se apilan verticalmente */
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Esto permite que los elementos se ajusten en pantallas pequeñas */
     height: auto;
 }
 
 /* Estilo de la imagen */
 #logo-link {
     display: flex;
-    justify-content: flex-start; /* Logo alineado a la izquierda */
-    margin-right: 20px;
+    justify-content: center;
+    margin-bottom: 20px; /* Separación entre logo y menú */
 }
 
 header img {
-    margin-left: 10em; /* Ajuste para pantallas grandes */
+    max-width: 100%;
+    height: auto;
 }
 
-/* Estilo de los enlaces en el menú (botones) */
-header nav a {
+/* Menú */
+#navbar {
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Esto permitirá que los elementos se muevan a la siguiente línea si no hay suficiente espacio */
+}
+
+.nav-item {
+    padding: 0.5em;
+}
+
+.nav-link {
     color: black;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 20px; /* Tamaño fijo de la fuente */
     background-color: var(--color-logo);
-    padding: 0.9em 2em; /* Ajuste del padding para que se vea como un botón */
+    padding: .2em; /* Tamaño de padding ajustado para mayor tamaño de los botones */
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    display: inline-block; /* Asegura que se comporten como botones */
-    margin-right: 1em;
+    display: inline-block;
+    width: 150px; /* Ancho fijo para los botones */
+    height: 60px; /* Altura fija para los botones */
+    line-height: 60px; /* Centra el texto verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
 }
 
-header nav a:hover {
+/* Efecto hover */
+.nav-link:hover {
     background-color: black;
-    color: #F9E041;
-}
-
-/* Menú: en pantallas grandes a la derecha */
-header nav {
-    margin-right: 2em; /* Ajuste para el espaciado en pantallas grandes */
+    color: #F9E041; /* El color cambia a amarillo en el hover */
 }
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
-    
-    #header {
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-        align-items: center; /* Centra todo el contenido en pantallas pequeñas */
+    /* Menú debajo del logo en pantallas pequeñas */
+    header {
+        flex-direction: column; /* Aseguramos que la cabecera se disponga en columna */
+        align-items: center; /* Centrado del logo y menú */
     }
 
-    /* Centrar el logo en pantallas pequeñas */
-    #logo-link {
-        margin-right: 8.3em;
-        justify-content: center; /* Centrado del logo */
-        margin-bottom: 20px; /* Espaciado hacia abajo */
-    }
-
-    /* Menú apilado debajo del logo en pantallas pequeñas */
+    /* Menú en columna debajo del logo */
     #navbar {
-        margin-left: 3.5em;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 0;
+        flex-direction: column; /* Los elementos se apilan uno debajo de otro */
+        gap: 15px; /* Espaciado entre los elementos */
+        align-items: center; /* Centra los elementos */
+        margin-top: 20px; /* Separación adicional entre logo y menú */
     }
 
-    /* Ajuste de los enlaces en pantallas pequeñas */
+    /* Ajuste de los enlaces */
     .nav-link {
-        margin: 10px 0;
-        padding: 0.9em 2em;
-        font-size: 18px; /* Ajuste de tamaño para pantallas pequeñas */
-        text-align: center;
-        background-color: var(--color-logo); /* Mantiene el color de fondo */
-        color: black;
-        border-radius: 10px;
-        display: inline-block;
+        font-size: 20px; /* Mantiene el tamaño de la fuente fijo */
+        padding: .2em; /* Botones más grandes para mejorar la usabilidad */
+        width: 150px; /* Ancho fijo para los botones */
+        height: 60px; /* Altura fija para los botones */
+        line-height: 60px; /* Centra el texto verticalmente */
+        text-align: center; /* Centra el texto */
     }
+
+    /* Efecto hover en pantallas pequeñas */
     .nav-link:hover {
         background-color: black;
-        color: #F9E041;
+        color: #F9E041; /* El color cambia a amarillo en el hover */
     }
- 
 }
+

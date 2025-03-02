@@ -10,59 +10,72 @@
 </head>
 <body>
 
-  <header class="container-fluid p-4 d-flex align-items-center bg-black" id="header">
-    <!-- Logo a la izquierda en pantallas grandes y centrado en pantallas pequeñas -->
-    <a href="main.html" id="logo-link">
+  <!-- Cabecera con el logo y menú -->
+  <header class="container-fluid p-4 d-flex flex-column align-items-center" id="header">
+    <!-- Logo centrado en todas las pantallas -->
+    <a href="main.html" id="logo-link" class="d-flex justify-content-center mb-3">
       <img src="../imagenes/logoWhyNot.png" alt="Logo Why Not" class="img-fluid" width="130" height="150">
     </a>
     
-    <!-- Menú alineado a la derecha en pantallas grandes, debajo del logo en pantallas pequeñas -->
-    <nav id="navbar">
-      <a href="main.html" class="nav-link">Inicio</a>
-      <a href="carta.html" class="nav-link">Carta</a>
-      <a href="historia.html" class="nav-link">Historia</a>
-      <a href="galeria.html" class="nav-link">Galería</a>
-      <a href="reservas.html" class="nav-link">Reservas</a>
+    <!-- Menú con columnas en pantallas grandes, en fila en pantallas pequeñas -->
+    <nav id="navbar" class="w-100">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a href="main.html" class="nav-link text-black">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="carta.html" class="nav-link text-black">Carta</a>
+        </li>
+        <li class="nav-item">
+          <a href="historia.html" class="nav-link text-black">Historia</a>
+        </li>
+        <li class="nav-item">
+          <a href="galeria.html" class="nav-link text-black">Galería</a>
+        </li>
+        <li class="nav-item">
+          <a href="reservas.html" class="nav-link text-black">Reservas</a>
+        </li>
+      </ul>
     </nav>
   </header>
   
-  
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-6 col-md-12">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+  <!-- Contenido de la página -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-6 col-md-12">
+        <h3>Column 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-3 col-md-6">
+        <h3>Column 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-3 col-md-6">
+        <h3>Column 3</h3>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
     </div>
-    <div class="col-sm-3 col-md-6" >
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-3 col-md-6">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
 
-  <div class="row">
-
-    <div class="col-md-3">
+    <div class="row">
+      <div class="col-md-3">
         <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
         <p>Dignissimos, adipisci! Vitae, voluptatem architecto!</p>
-    </div>
-    <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
         <p>Commodi iure quasi ad modi?</p>
-    </div>
-    <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
         <p>Quod quis suscipit enim tenetur.</p>
+      </div>
     </div>
-
   </div>
-</div>
 
 </body>
 </html>
+
+
