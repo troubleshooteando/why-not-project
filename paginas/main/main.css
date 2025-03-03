@@ -60,13 +60,13 @@ header img {
     text-transform: uppercase;
     font-size: 20px; /* Tamaño fijo de la fuente */
     background-color: var(--color-logo);
-    padding: .2em; /* Tamaño de padding ajustado para mayor tamaño de los botones */
+    padding-bottom: .1em; /* Tamaño de padding ajustado para mayor tamaño de los botones */
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: inline-block;
     width: 150px; /* Ancho fijo para los botones */
     height: 60px; /* Altura fija para los botones */
-    line-height: 60px; /* Centra el texto verticalmente */
+    line-height: 40px; /* Centra el texto verticalmente */
     text-align: center; /* Centra el texto horizontalmente */
 }
 
@@ -101,10 +101,10 @@ footer{
     /* Ajuste de los enlaces */
     .nav-link {
         font-size: 20px; /* Mantiene el tamaño de la fuente fijo */
-        padding: .2em; /* Botones más grandes para mejorar la usabilidad */
+        padding: .4em; /* Botones más grandes para mejorar la usabilidad */
         width: 150px; /* Ancho fijo para los botones */
         height: 60px; /* Altura fija para los botones */
-        line-height: 60px; /* Centra el texto verticalmente */
+        line-height: 40px; /* Centra el texto verticalmente */
         text-align: center; /* Centra el texto */
     }
 
@@ -112,6 +112,10 @@ footer{
     .nav-link:hover {
         background-color: black;
         color: #F9E041; /* El color cambia a amarillo en el hover */
+    }
+
+    footer span{
+        padding-right: 2em;        
     }
 }
 
