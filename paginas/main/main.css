@@ -79,6 +79,11 @@ header img {
 footer{
     background-color: rgb(19, 19, 19);
     margin-top: 6em;
+    color: #F9E041;
+}
+
+footer a{
+    color: #F9E041;
 }
 
 /* Media Query para pantallas pequeñas */
