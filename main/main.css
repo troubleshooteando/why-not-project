@@ -76,6 +76,10 @@ header img {
     color: #F9E041; /* El color cambia a amarillo en el hover */
 }
 
+footer{
+    background-color: rgb(19, 19, 19);
+}
+
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
     /* Menú debajo del logo en pantallas pequeñas */
@@ -85,7 +89,7 @@ header img {
     }
 
     /* Menú en columna debajo del logo */
-    #navbar {
+    .nav-link{
         display: flex;
         flex-direction: column; /* Los elementos se apilan uno debajo de otro */
         gap: 15px; /* Espaciado entre los elementos */
