@@ -5,7 +5,7 @@
 /* Fuentes personalizadas */
 @font-face {
     font-family: koara-font;
-    src: url(../fuentes/Rosario\ Nocera\ -\ Koara\ free\ Bold.otf);
+    src: url(../../fuentes/Rosario\ Nocera\ -\ Koara\ free\ Bold.otf);
 }
 
 /* Estilo base para el body */
@@ -78,6 +78,7 @@ header img {
 
 footer{
     background-color: rgb(19, 19, 19);
+    margin-top: 6em;
 }
 
 /* Media Query para pantallas pequeñas */
