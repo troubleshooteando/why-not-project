@@ -1,5 +1,6 @@
 :root {
-    --color-logo: #F9E041;
+    /* --color-logo: #F9E041; */
+    --color-logo: #ffe135;
 }
 
 /* Fuentes personalizadas */
@@ -62,20 +63,20 @@ header img {
     text-transform: uppercase;
     font-size: 20px; /* Tamaño fijo de la fuente */
     background-color: var(--color-logo);
-    padding-bottom: .1em; /* Tamaño de padding ajustado para mayor tamaño de los botones */
     border-radius: 60px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    display: inline-block;
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
     width: 150px; /* Ancho fijo para los botones */
     height: 60px; /* Altura fija para los botones */
-    line-height: 2em; /* Centra el texto verticalmente */
-    text-align: center; /* Centra el texto horizontalmente */
 }
+
 
 /* Efecto hover */
 .nav-link:hover {
     background-color: black;
-    color: #F9E041; /* El color cambia a amarillo en el hover */
+    color: var(--color-logo); /* El color cambia a amarillo en el hover */
 }
 
 #contenido{
@@ -102,11 +103,11 @@ header img {
 footer {
     background-color: rgb(19, 19, 19);
     margin-top: 1em; /* Ajusta el margen superior del footer */
-    color: #F9E041;
+    color: var(--color-logo);
 }
 
 footer a{
-    color: #F9E041;
+    color: var(--color-logo);
 }
 
 /* Media Query para pantallas pequeñas */
@@ -123,17 +124,13 @@ footer a{
         flex-direction: column; /* Los elementos se apilan uno debajo de otro */
         gap: 15px; /* Espaciado entre los elementos */
         align-items: center; /* Centra los elementos */
+        justify-content: center;
         margin-top: 20px; /* Separación adicional entre logo y menú */
-    }
-
-    /* Ajuste de los enlaces */
-    .nav-link {
         font-size: 20px; /* Mantiene el tamaño de la fuente fijo */
         padding: .4em; /* Botones más grandes para mejorar la usabilidad */
         width: 150px; /* Ancho fijo para los botones */
         height: 60px; /* Altura fija para los botones */
         line-height: 2em; /* Centra el texto verticalmente */
-        text-align: center; /* Centra el texto */
     }
 
     #carrusel{
