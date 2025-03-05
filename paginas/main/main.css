@@ -11,8 +11,10 @@
 /* Estilo base para el body */
 body {
     font-family: koara-font;
-    margin: 0;
-    padding: 0;
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+    background-color: #ffe364;
 }
 
 /* Cabecera */
@@ -66,7 +68,7 @@ header img {
     display: inline-block;
     width: 150px; /* Ancho fijo para los botones */
     height: 60px; /* Altura fija para los botones */
-    line-height: 40px; /* Centra el texto verticalmente */
+    line-height: 50px; /* Centra el texto verticalmente */
     text-align: center; /* Centra el texto horizontalmente */
 }
 
@@ -76,9 +78,28 @@ header img {
     color: #F9E041; /* El color cambia a amarillo en el hover */
 }
 
-footer{
+#contenido{
     background-color: rgb(19, 19, 19);
-    margin-top: 6em;
+}
+
+#carouselExampleCaptions{
+    border: 10px solid black;
+    background-color: grey;
+    width: 70%;
+    margin: 3em auto 0 auto;
+}
+
+#ubicacion{
+    width: 70%; /* Misma anchura que el carrusel */
+    margin: 3em auto; /* Centrado horizontalmente */
+}
+#ubicacion iframe {
+    width: 100%;
+}
+
+footer {
+    background-color: rgb(19, 19, 19);
+    margin-top: 1em; /* Ajusta el margen superior del footer */
     color: #F9E041;
 }
 
@@ -109,8 +130,15 @@ footer a{
         padding: .4em; /* Botones más grandes para mejorar la usabilidad */
         width: 150px; /* Ancho fijo para los botones */
         height: 60px; /* Altura fija para los botones */
-        line-height: 40px; /* Centra el texto verticalmente */
+        line-height: 50px; /* Centra el texto verticalmente */
         text-align: center; /* Centra el texto */
+    }
+
+    #carouselExampleCaptions{
+        border: 10px solid black;
+        background-color: grey;
+        width: 70%;
+        margin: 3em auto 0 auto;
     }
 
     /* Efecto hover en pantallas pequeñas */
