@@ -41,38 +41,60 @@
   </header>
   
   <!-- Contenido de la página -->
-  <div id="contenido" class="container mt-5">
+  <div id="container-reserva" class="container mt-5">
     <div class="row">
       <div class="col-sm-6 col-md-12">
         <h3>RESERVAS</h3>
+        
+      </div>
 
-      </div>
-      <div class="col-sm-3 col-md-6">
-        <h3>Column 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-3 col-md-6">
-        <h3>Column 3</h3>        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-    </div>
+    <div>
+        <form id="reservas-form">
+          <label for="nombre">Nombre: </label>
+          <input type="text" id="nombre" required>
 
-    <div class="row">
-      <div class="col-md-3">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="col-md-3">
-        <p>Dignissimos, adipisci! Vitae, voluptatem architecto!</p>
-      </div>
-      <div class="col-md-3">
-        <p>Commodi iure quasi ad modi?</p>
-      </div>
-      <div class="col-md-3">
-        <p>Quod quis suscipit enim tenetur.</p>
-      </div>
+          <label for="telefono">Telefono: </label>
+          <input type="tel" id="telefono" required>
+
+          <label for="fecha">Fecha: </label>
+          <input type="date" id="fecha" required>
+
+          <label for="hora">Hora: </label>
+          <input type="time" id="hora" required>
+
+          <button type="submit">Reservar por WhatsApp</button>
+        </form>
+
+        <script>
+          document.getElementById("reservas-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Obtener valores del formulario
+            let nombre = document.getElementById("nombre").value;
+            let telefono = document.getElementById("telefono").value;
+            let fechaOriginal = document.getElementById("fecha").value;
+            let hora = document.getElementById("hora").value;
+
+            // Convertir fecha a DD/MM/YYYY
+
+            let partesFecha = fechaOriginal.split("-");
+            let fecha = `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
+
+            // Número de WhatsApp del dueño (sin el +, solo código de país y número)
+            let numeroWhatsApp = "34641605861";
+
+            // Mensaje de reserva
+            let mensaje = `Nombre: ${nombre}. Fecha: ${fecha}, Hora: ${hora}. Telefono: ${telefono}.`;
+
+            // Codificar mensaje en URL
+            let url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
+
+            // Redirigir a WhatsApp
+            window.open(url, "_blank");
+            });
+        </script>
     </div>
+      
   </div>
 
   
