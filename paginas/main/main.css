@@ -94,7 +94,6 @@ header img {
 #ubicacion{
     width: 70%; /* Misma anchura que el carrusel */
     margin: 3em auto; /* Centrado horizontalmente */
-    box-shadow: 1rem 1.2rem 1.2rem;
 }
 #ubicacion iframe {
     width: 100%;
