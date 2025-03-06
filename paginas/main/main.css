@@ -141,3 +141,65 @@ footer a{
     }
 }
 
+/* CSS DE RESERVAS*/
+
+/* Contenedor principal del formulario */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título del formulario */
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Agrupación de los elementos del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Estilos para etiquetas */
+.form-group label {
+    align-self: flex-start;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los inputs */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eef0eb;
+    font-size: 16px;
+}
+
+/* Botón de envío */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2d5c3d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #244d30;
+}
