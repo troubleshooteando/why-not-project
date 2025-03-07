@@ -70,6 +70,10 @@ header img {
     align-items: center; /* Centra el texto verticalmente */
     width: 150px; /* Ancho fijo para los botones */
     height: 60px; /* Altura fija para los botones */
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    transform-origin: center;
+    box-shadow: 0 5px; /* Sombra inicial */
 }
 
 
@@ -77,6 +81,20 @@ header img {
 .nav-link:hover {
     background-color: black;
     color: var(--color-logo); /* El color cambia a amarillo en el hover */
+    transform: scale3d(0.95, 0.95, 0.95); /* Reduce el tamaño en todos los ejes */
+}
+
+.nav-link:active {
+    transform: translateY(4px); /* Mueve el botón hacia abajo */
+    box-shadow: 0 2px 0; /* Reduce la sombra para dar efecto de hundimiento */
+}
+
+#submitWhatsapp{
+    padding-top: .5em;
+}
+
+#submitWhatsapp:hover{
+    transform: scale3d(1.015, 1.015, 1.015); /* Reduce el tamaño en todos los ejes */
 }
 
 #contenido{
