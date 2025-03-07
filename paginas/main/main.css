@@ -71,7 +71,7 @@ header img {
     width: 150px; /* Ancho fijo para los botones */
     height: 60px; /* Altura fija para los botones */
     cursor: pointer;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.3s ease-in-out;
     transform-origin: center;
 
 }
