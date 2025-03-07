@@ -15,12 +15,13 @@ body {
     display: grid;
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
-    background-image:url(../../imagenes/fondoPeriodico.webp);
+    background: fixed;
+    background-color: rgb(217, 206, 206);
 }
 
 /* Cabecera */
 header {
-    background-color: rgb(19, 19, 19);
+    background-color: var(--color-logo);
     padding: 20px;
     display: flex;
     flex-direction: column; /* En pantallas grandes, los elementos se apilan verticalmente */
@@ -58,11 +59,11 @@ header img {
 }
 
 .nav-link {
-    color: black;
+    color: var(--color-logo);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px; /* Tamaño fijo de la fuente */
-    background-color: var(--color-logo);
+    background-color: black;
     border-radius: 60px;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: flex; /* Usa flexbox */
@@ -79,8 +80,8 @@ header img {
 
 /* Efecto hover */
 .nav-link:hover {
-    background-color: black;
-    color: var(--color-logo); /* El color cambia a amarillo en el hover */
+    background-color: var(--color-logo);
+    color: black; /* El color cambia a amarillo en el hover */
     transform: scale3d(0.95, 0.95, 0.95); /* Reduce el tamaño en todos los ejes */
 }
 
@@ -117,7 +118,7 @@ header img {
 }
 
 footer {
-    background-color: rgb(19, 19, 19);
+    background-color: var();
     margin-top: 1em; /* Ajusta el margen superior del footer */
     color: var(--color-logo);
 }
