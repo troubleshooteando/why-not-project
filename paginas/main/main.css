@@ -103,7 +103,7 @@ header img {
 
 #carrusel {
     box-shadow: 1rem 1.2rem 1.2rem; 
-    background-color: grey;
+    background-color: rgb(19, 19, 19);
     width: 70%;
     margin: 3em auto 0 auto;
 }
@@ -117,14 +117,20 @@ header img {
     width: 100%;
 }
 
-footer {
-    background-color: var();
+/* FOOTER */
+
+#footer {
+    background-color: var(--color-logo);
     margin-top: 1em; /* Ajusta el margen superior del footer */
     color: var(--color-logo);
 }
 
-footer a{
-    color: var(--color-logo);
+#footer a{
+    color: BLACK;
+}
+
+#footer span{
+    color: black;
 }
 
 /* Media Query para pantallas pequeñas */
