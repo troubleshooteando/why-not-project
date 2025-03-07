@@ -73,7 +73,7 @@ header img {
     cursor: pointer;
     transition: all 0.25s ease-in-out;
     transform-origin: center;
-    box-shadow: 0 5px; /* Sombra inicial */
+
 }
 
 
@@ -86,7 +86,6 @@ header img {
 
 .nav-link:active {
     transform: translateY(4px); /* Mueve el botón hacia abajo */
-    box-shadow: 0 2px 0; /* Reduce la sombra para dar efecto de hundimiento */
 }
 
 #submitWhatsapp{
