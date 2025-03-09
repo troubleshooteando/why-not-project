@@ -19,6 +19,20 @@ body {
     background-color: rgb(217, 206, 206);
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+*{
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+
 /* Cabecera */
 header {
     background-color: var(--color-logo);
@@ -28,6 +42,7 @@ header {
     justify-content: center;
     align-items: center;
     height: auto;
+
 }
 
 /* Estilo de la imagen */
@@ -74,13 +89,11 @@ header img {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     transform-origin: center;
-
 }
-
 
 /* Efecto hover */
 .nav-link:hover {
-    background-color: var(--color-logo);
+    background-color: white;
     color: black; /* El color cambia a amarillo en el hover */
     transform: scale3d(0.95, 0.95, 0.95); /* Reduce el tamaño en todos los ejes */
 }
@@ -108,6 +121,38 @@ header img {
     margin: 3em auto 0 auto;
 }
 
+#carrusel h5{
+    font-size: 3em;
+    text-shadow: 0px 0px 10px #000,
+    0px 0px 20px #000,
+    0px 0px 30px #000,
+    0px 0px 40px #000;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100vh;  /* Ajusta la imagen a la altura de la pantalla */
+    object-fit: cover; /* Evita espacios vacíos manteniendo la proporción */
+}
+
+.carousel-item a:hover{
+    transform: scale3d(1.05, 1.05, 1.05); /* Reduce el tamaño en todos los ejes */
+}
+
+.carousel-item {
+    transition: opacity 1s ease !important;
+}
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active {
+    opacity: 0;
+    z-index: 0;
+}
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+    z-index: 1;
+}
+
 
 #ubicacion{
     width: 70%; /* Misma anchura que el carrusel */
@@ -126,12 +171,24 @@ header img {
 }
 
 #footer a{
-    color: BLACK;
+    color: black;
+    font-size: 1.2em;
 }
 
 #footer span{
     color: black;
+    font-size: 1.2em;
 }
+
+footer ul a{
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul a:last-child{
+    line-height: .5em;
+}
+
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -156,10 +213,14 @@ header img {
         line-height: 2em; /* Centra el texto verticalmente */
     }
 
-    #carrusel{
-        box-shadow: 0.8rem 1rem 1rem;
+    .carousel-item img {
+        height: 50vh;
     }
 
+    #carrusel h5{
+        font-size: 2em;
+    }
+    
     footer span{
         padding-bottom: 1em;        
     }
