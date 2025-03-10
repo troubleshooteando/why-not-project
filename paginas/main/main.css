@@ -230,61 +230,61 @@ footer ul a:last-child{
 
 /* Contenedor principal del formulario */
 .form-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio entre los botones */
 }
 
 /* Título del formulario */
 .form-title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 1em;
+}
+
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 10em;
 }
 
 /* Agrupación de los elementos del formulario */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-/* Estilos para etiquetas */
-.form-group label {
-    align-self: flex-start;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* Estilos para los inputs */
-.form-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #eef0eb;
-    font-size: 16px;
-}
-
-/* Botón de envío */
-.submit-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #2d5c3d;
-    color: white;
+.whatsapp-btn, .call-btn {
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Ajusta el ancho del botón */
+    max-width: 300px; /* Máximo tamaño para que no se vea demasiado grande */
+    text-align: center;
 }
 
-.submit-btn:hover {
-    background-color: #244d30;
+.whatsapp-btn {
+    background-color: #25D366; /* Color oficial de WhatsApp */
+}
+
+.whatsapp-btn:hover {
+    background-color: #1EBE5D;
+    transform: translateY(-2px);
+}
+
+.call-btn {
+    background-color: #007BFF; /* Azul estándar para llamadas */
+}
+
+.call-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }

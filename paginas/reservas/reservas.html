@@ -45,59 +45,28 @@
   <main>
     
     <div class="form-container">
-      <h3 class="form-title">RESERVAR MESA</h3>
-      <form id="reservation-form">
-        <div class="form-group">
-          <label for="nombre">Nombre: </label>
-          <input type="text" id="nombre" name="nombre" class="form-input" required>
-          <label for="apellidos">Apellidos: </label>
-          <input type="text" id="apellidos" name="apellidos" class="form-input" required>
-        </div>
-        <div class="form-group">
-          <label for="numPersonas">Número de personas: </label>
-          <input type="number" min="1" max="10" value="2" id="npersonas" name="npersonas" class="form-input" required>
-        </div>
-        <div class="form-group">
-          <label for="fecha">Fecha: </label>
-          <input type="date" id="fecha" name="fecha" class="form-input" required>
-        </div>
-        <div class="form-group">
-          <label for="hora">Hora: </label>
-          <input type="time" id="hora" name="hora" class="form-input" equired>
-        </div>
-        <div class="form-group">
-          <label for="telefono">Telefono: </label>
-          <input type="tel" id="telefono" name="telefono" class="form-input" required>
-        </div>
-        <div class="form-group" id="submitWhatsapp">
-          <button type="submit" class="submit-btn">Reservar por WhatsApp</button>
-        </div>
-      </form>
-
-      <script>
-        document.getElementById("reservation-form").addEventListener("submit", function(event) {
-          event.preventDefault();
-          // Obtener valores del formulario
-          let nombre = document.getElementById("nombre").value;
-          let apellidos = document.getElementById("apellidos").value;
-          let telefono = document.getElementById("telefono").value;
-          let fechaOriginal = document.getElementById("fecha").value;
-          let hora = document.getElementById("hora").value;
-          let npersonas = document.getElementById("npersonas").value;
-          // Convertir fecha a DD/MM/YYYY
-          let partesFecha = fechaOriginal.split("-");
-          let fecha = `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
-          // Número de WhatsApp del dueño (sin el +, solo código de país y número)
-          let numeroWhatsApp = "34641605861";
-          // Mensaje de reserva
-          let mensaje = `Nombre: ${nombre} ${apellidos}. Personas: ${npersonas}. Fecha: ${fecha}, Hora: ${hora}. Telefono: ${telefono}.`;
-          // Codificar mensaje en URL
-          let url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
-          // Redirigir a WhatsApp
-          window.open(url, "_blank");
-          });
-      </script>
+      <div class="form-group-box">
+        <h3 class="form-title">RESERVAR MESA</h3>       
+      </div>
+      <div class="form-group">
+        <button type="button" class="whatsapp-btn" onclick="reservarPorWhatsapp()">Reservar por WhatsApp</button>
+        <button type="submit" class="call-btn" onclick="reservarPorTelefono()">Reservar por Teléfono</button>
+      </div>
     </div>
+      
+
+    <script>
+      function reservarPorWhatsapp() {
+        const telefonoWhatsapp = "34641605861"
+        let url = `https://api.whatsapp.com/send?phone=${telefonoWhatsapp}`;
+        // Redirigir a WhatsApp
+        window.open(url, "_blank");
+        };
+      function reservarPorTelefono() {
+        const telefono = "34641605861"
+        window.location.href = `tel:${telefono}`;
+      }
+    </script>
   </main>
 
   <!-- footer -->
