@@ -22,6 +22,7 @@ footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
 body, html {
@@ -98,6 +99,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 3px #60f7ef solid;
 }
 
 .card img {
@@ -106,7 +108,7 @@ main {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
-    align-self: center;  /* Asegura que la imagen esté centrada */
+    align-self: center;
 }
 
 .card p {
@@ -128,16 +130,23 @@ main {
 
 .social-icons a {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.social-icons a:hover {
-    color: #3498db;
+.bi-github:hover {
+    color:  #308446;
+}
+.bi-instagram:hover {
+    color:  #ff0077;
+}
+.bi-linkedin:hover {
+    color:  #0e76a8;
 }
 
-/* Media Queries para hacer la página responsive */
+
+/* Media Queries */
 @media (max-width: 768px) {
     .card {
         width: 80%;
