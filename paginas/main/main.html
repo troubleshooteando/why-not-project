@@ -14,30 +14,28 @@
 
   <!-- Cabecera con el logo y menú -->
   <header class="container-fluid p-4 d-flex flex-column align-items-center" id="header">
+    
     <!-- Logo centrado en todas las pantallas -->
     <a href="main.html" id="logo-link" class="d-flex justify-content-center mb-3">
       <img src="../../imagenes/logoWhyNot.png" alt="Logo Why Not" class="img-fluid" width="130" height="150">
     </a>
     
     <!-- Menú con columnas en pantallas grandes, en fila en pantallas pequeñas -->
-    <nav id="navbar" class="w-100">
-      <ul class="nav navbar-expand-lg justify-content-center">
-        <li class="nav-item">
-          <a href="main.html" class="nav-link">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a href="../carta/carta.html" class="nav-link">Carta</a>
-        </li>
-        <li class="nav-item">
-          <a href="../historia/historia.html" class="nav-link">Historia</a>
-        </li>
-        <li class="nav-item">
-          <a href="../galeria/galeria.html" class="nav-link">Galería</a>
-        </li>
-        <li class="nav-item">
-          <a href="../reservas/reservas.html" class="nav-link">Reservas</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg w-100" id="navbar">
+      <div class="container-fluid">
+        <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item"><a href="main.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="../carta/carta.html" class="nav-link">Carta</a></li>
+            <li class="nav-item"><a href="../historia/historia.html" class="nav-link">Historia</a></li>
+            <li class="nav-item"><a href="../galeria/galeria.html" class="nav-link">Galería</a></li>
+            <li class="nav-item"><a href="../reservas/reservas.html" class="nav-link">Reservas</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   

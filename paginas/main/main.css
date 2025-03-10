@@ -28,28 +28,26 @@ body {
     }
 }
 
-*{
+* {
     animation: fadeIn 1s ease-in-out forwards;
 }
-
 
 /* Cabecera */
 header {
     background-color: var(--color-logo);
     padding: 20px;
     display: flex;
-    flex-direction: column; /* En pantallas grandes, los elementos se apilan verticalmente */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: auto;
-
 }
 
 /* Estilo de la imagen */
 #logo-link {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px; /* Separación entre logo y menú */
+    margin-bottom: 20px;
 }
 
 header img {
@@ -66,183 +64,293 @@ header img {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; /* Esto permitirá que los elementos se muevan a la siguiente línea si no hay suficiente espacio */
+    flex-wrap: wrap;
 }
 
 .nav-item {
     padding: 0.5em;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-link {
     color: var(--color-logo);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 20px; /* Tamaño fijo de la fuente */
+    font-size: 20px;
     background-color: black;
     border-radius: 60px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    display: flex; /* Usa flexbox */
-    justify-content: center; /* Centra el texto horizontalmente */
-    align-items: center; /* Centra el texto verticalmente */
-    width: 150px; /* Ancho fijo para los botones */
-    height: 60px; /* Altura fija para los botones */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     transform-origin: center;
 }
 
+/* Estilos específicos para el navbar */
+.navbar-nav {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-toggler {
+    margin: 0 auto;
+    display: block;
+}
+
+.navbar .container-fluid {
+    justify-content: center;
+}
+
+#navbarNav {
+    text-align: center;
+}
+
+.navbar-collapse {
+    justify-content: center;
+    margin-top: 10px;
+}
+
 /* Efecto hover */
 .nav-link:hover {
     background-color: white;
-    color: black; /* El color cambia a amarillo en el hover */
-    transform: scale3d(0.95, 0.95, 0.95); /* Reduce el tamaño en todos los ejes */
+    color: black;
+    transform: scale3d(0.95, 0.95, 0.95);
 }
 
 .nav-link:active {
-    transform: translateY(4px); /* Mueve el botón hacia abajo */
+    transform: translateY(4px);
 }
 
-#submitWhatsapp{
-    padding-top: .5em;
+#submitWhatsapp {
+    padding-top: 0.5em;
 }
 
-#submitWhatsapp:hover{
-    transform: scale3d(1.015, 1.015, 1.015); /* Reduce el tamaño en todos los ejes */
+#submitWhatsapp:hover {
+    transform: scale3d(1.015, 1.015, 1.015);
 }
 
-#contenido{
+#contenido {
     background-color: rgb(19, 19, 19);
 }
 
 #carrusel {
-    box-shadow: 1rem 1.2rem 1.2rem; 
+    box-shadow: 1rem 1.2rem 1.2rem;
     background-color: rgb(19, 19, 19);
     width: 70%;
     margin: 3em auto 0 auto;
 }
 
-#carrusel h5{
+#carrusel h5 {
     font-size: 3em;
     text-shadow: 0px 0px 10px #000,
-    0px 0px 20px #000,
-    0px 0px 30px #000,
-    0px 0px 40px #000;
-}
-.carousel-item img {
-    width: 100%;
-    height: 100vh;  /* Ajusta la imagen a la altura de la pantalla */
-    object-fit: cover; /* Evita espacios vacíos manteniendo la proporción */
+        0px 0px 20px #000,
+        0px 0px 30px #000,
+        0px 0px 40px #000;
 }
 
-.carousel-item a:hover{
-    transform: scale3d(1.05, 1.05, 1.05); /* Reduce el tamaño en todos los ejes */
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-item a:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
 }
 
 .carousel-item {
     transition: opacity 1s ease !important;
 }
+
 .carousel-fade .carousel-item-next,
 .carousel-fade .carousel-item-prev,
 .carousel-fade .carousel-item.active {
     opacity: 0;
     z-index: 0;
 }
+
 .carousel-fade .carousel-item-next.carousel-item-left,
 .carousel-fade .carousel-item-prev.carousel-item-right {
     opacity: 1;
     z-index: 1;
 }
 
-
-#ubicacion{
-    width: 70%; /* Misma anchura que el carrusel */
-    margin: 3em auto; /* Centrado horizontalmente */
+#ubicacion {
+    width: 70%;
+    margin: 3em auto;
 }
+
 #ubicacion iframe {
     width: 100%;
 }
 
 /* FOOTER */
-
 #footer {
     background-color: var(--color-logo);
-    margin-top: 1em; /* Ajusta el margen superior del footer */
+    margin-top: 1em;
     color: var(--color-logo);
 }
 
-#footer a{
+#footer a {
     color: black;
     font-size: 1.2em;
 }
 
-#footer span{
+#footer span {
     color: black;
     font-size: 1.2em;
 }
 
-footer ul a{
+/* Quitar los estilos de lista para el footer */
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul a {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-footer ul a:last-child{
-    line-height: .5em;
+footer ul a:last-child {
+    line-height: 1;
 }
-
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
     /* Menú debajo del logo en pantallas pequeñas */
     header {
-        flex-direction: column; /* Aseguramos que la cabecera se disponga en columna */
-        align-items: center; /* Centrado del logo y menú */
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Menú en columna debajo del logo */
-    .nav-link{
-        display: flex;
-        flex-direction: column; /* Los elementos se apilan uno debajo de otro */
-        gap: 15px; /* Espaciado entre los elementos */
-        align-items: center; /* Centra los elementos */
+    /* Asegura que el toggler esté centrado */
+    .navbar-toggler {
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Centro del contenedor del navbar */
+    .navbar .container-fluid {
         justify-content: center;
-        margin-top: 20px; /* Separación adicional entre logo y menú */
-        font-size: 20px; /* Mantiene el tamaño de la fuente fijo */
-        padding: .4em; /* Botones más grandes para mejorar la usabilidad */
-        width: 150px; /* Ancho fijo para los botones */
-        height: 60px; /* Altura fija para los botones */
-        line-height: 2em; /* Centra el texto verticalmente */
     }
 
+    /* Centrar el menú desplegado */
+    #navbarNav {
+        text-align: center;
+    }
+
+    /* Centrar los elementos nav */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Centrar cada ítem de navegación */
+    .nav-item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    /* Estilo específico para los enlaces en móvil */
+    .nav-link {
+        width: 150px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+
+    /* Ajustar espacio para transición del toggler */
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+
+    /* Ajustar altura del carrusel en móvil */
     .carousel-item img {
         height: 50vh;
     }
 
-    #carrusel h5{
+    #carrusel h5 {
         font-size: 2em;
     }
+
+    /* Footer en pantallas pequeñas */
+    #footer {
+        text-align: center;
+    }
     
-    footer span{
-        padding-bottom: 1em;        
+    #footer .col-12 {
+        margin-bottom: 10px;
+    }
+    
+    footer span {
+        padding-bottom: 1em;
+    }
+    
+    /* IMPORTANTE: Iconos del footer en línea para móviles */
+    footer ul.nav {
+        flex-direction: row !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+    
+    footer ul.nav li {
+        margin: 0 10px !important;
+        display: inline-flex !important;
+        width: auto !important;
+    }
+    
+    /* Ajuste específico para la última fila del footer en móvil */
+    footer .col-12.col-md-4:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Eliminar cualquier configuración de columna que pueda estar afectando */
+    footer ul.col-12.col-md-4 {
+        flex-direction: row !important;
     }
 }
 
-/* CSS DE RESERVAS*/
-
-/* Contenedor principal del formulario */
+/* CSS DE RESERVAS */
 .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Espacio entre los botones */
+    gap: 15px;
 }
 
-/* Título del formulario */
 .form-title {
     font-size: 24px;
     font-weight: bold;
     margin: 1em;
 }
-
 
 .form-group {
     display: flex;
@@ -252,7 +360,6 @@ footer ul a:last-child{
     height: 10em;
 }
 
-/* Agrupación de los elementos del formulario */
 .whatsapp-btn, .call-btn {
     padding: 12px 25px;
     border: none;
@@ -266,13 +373,13 @@ footer ul a:last-child{
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 80%; /* Ajusta el ancho del botón */
-    max-width: 300px; /* Máximo tamaño para que no se vea demasiado grande */
+    width: 80%;
+    max-width: 300px;
     text-align: center;
 }
 
 .whatsapp-btn {
-    background-color: #25D366; /* Color oficial de WhatsApp */
+    background-color: #25D366;
 }
 
 .whatsapp-btn:hover {
@@ -281,7 +388,7 @@ footer ul a:last-child{
 }
 
 .call-btn {
-    background-color: #007BFF; /* Azul estándar para llamadas */
+    background-color: #007BFF;
 }
 
 .call-btn:hover {
