@@ -98,7 +98,7 @@ header img {
     text-align: center;
 }
 
-.navbar-toggler {
+.hamburger {
     margin: 0 auto;
     display: block;
 }
@@ -114,6 +114,26 @@ header img {
 .navbar-collapse {
     justify-content: center;
     margin-top: 10px;
+}
+
+/* Eliminar el borde (outline) del botón hamburger al hacer clic */
+.hamburger:focus,
+.hamburger:active,
+.hamburger-box:focus,
+.hamburger-inner:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar también el borde que Bootstrap aplica al botón navbar-toggler */
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Para asegurar que se elimina en todos los navegadores */
+button::-moz-focus-inner {
+  border: 0;
 }
 
 /* Efecto hover */
@@ -219,17 +239,17 @@ footer ul {
 
 footer ul li {
     display: inline-block;
-    margin: 0 10px;
 }
 
 footer ul a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 footer ul a:last-child {
-    line-height: 1;
+    vertical-align: bottom;
 }
 
 /* Media Query para pantallas pequeñas */
@@ -315,8 +335,9 @@ footer ul a:last-child {
         flex-direction: row !important;
         justify-content: center !important;
         margin: 0 auto !important;
-        padding: 0 !important;
+        padding-top: 1em;
         width: auto !important;
+        
     }
     
     footer ul.nav li {
