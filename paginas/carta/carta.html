@@ -13,6 +13,51 @@
 </head>
 <body>
 
+  <style>
+
+    .carousel{
+      width: 100%;
+    }
+    
+    .carousel-item {
+        height: 400px;
+    }
+    
+    .carousel-image {
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .carousel-caption {
+        position: relative;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: left;
+        padding: 30px;
+        color: #333;
+        background-color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    @media (max-width: 767.98px) {
+        .carousel-item {
+            height: auto;
+        }
+        
+        .carousel-image-container {
+            height: 600px;
+        }
+        
+        .carousel-caption {
+            padding: 20px;
+        }
+    }
+  </style>
+
   <!-- Cabecera con el logo y menú -->
   <header class="container-fluid p-4 d-flex flex-column align-items-center" id="header">
     
@@ -63,40 +108,99 @@
       });
     </script>
 
+    
+
   </header>
   
   <!-- Contenido de la página -->
-  <div id="contenido" class="container mt-5">
-    <div class="row">
-      <div class="col-sm-6 col-md-12">
-        <h3>CARTA</h3>
-
-      </div>
-      <div class="col-sm-3 col-md-6">
-        <h3>Column 2</h3>
-
-      </div>
-      <div class="col-sm-3 col-md-6">
-        <h3>Column 3</h3>        
-
+  <main>
+    <div id="carruselBurgers" class="carousel py-5">
+      <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          
+          <!-- Diapositivas del carrusel -->
+          <div class="carousel-inner rounded shadow">
+              <!-- Diapositiva 1 -->
+              <div class="carousel-item active">
+                  <div class="row g-0">
+                      <div class="col-md-6 carousel-image-container">
+                          <img src="/api/placeholder/800/600" class="carousel-image w-100" alt="Imagen 1">
+                      </div>
+                      <div class="col-md-6">
+                          <div class="carousel-caption d-md-block">
+                              <h2>Título de la primera imagen</h2>
+                              <p>Esta es la descripción de la primera imagen. Aquí puedes colocar todo el texto que necesites para explicar la imagen que se muestra a la izquierda.</p>
+                              <button class="btn btn-primary">Más información</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Diapositiva 2 -->
+              <div class="carousel-item">
+                  <div class="row g-0">
+                      <div class="col-md-6 carousel-image-container">
+                          <img src="/api/placeholder/800/600" class="carousel-image w-100" alt="Imagen 2">
+                      </div>
+                      <div class="col-md-6">
+                          <div class="carousel-caption d-md-block">
+                              <h2>Título de la segunda imagen</h2>
+                              <p>Esta es la descripción de la segunda imagen. El carrusel es totalmente responsive y se adapta a diferentes tamaños de pantalla.</p>
+                              <button class="btn btn-primary">Más información</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Diapositiva 3 -->
+              <div class="carousel-item">
+                  <div class="row g-0">
+                      <div class="col-md-6 carousel-image-container">
+                          <img src="/api/placeholder/800/600" class="carousel-image w-100" alt="Imagen 3">
+                      </div>
+                      <div class="col-md-6">
+                          <div class="carousel-caption d-md-block">
+                              <h2>Título de la tercera imagen</h2>
+                              <p>Esta es la descripción de la tercera imagen. El diseño mantiene la imagen a la izquierda y el contenido a la derecha incluso cuando cambias de diapositiva.</p>
+                              <button class="btn btn-primary">Más información</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Controles del carrusel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+          </button>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-3">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="col-md-3">
-        <p>Dignissimos, adipisci! Vitae, voluptatem architecto!</p>
-      </div>
-      <div class="col-md-3">
-        <p>Commodi iure quasi ad modi?</p>
-      </div>
-      <div class="col-md-3">
-        <p>Quod quis suscipit enim tenetur.</p>
-      </div>
-    </div>
-  </div>
+    <!-- Script para el carrusel -->
+    <script>
+      // Reanudar el carrusel cuando se detecta que está en segundo plano.
+      const myCarousel = document.getElementById('carrusel');
+      const bsCarousel = new bootstrap.Carousel(myCarousel);
+      
+      myCarousel.addEventListener('mouseover', function() {
+          bsCarousel.pause();
+      });
+      
+      myCarousel.addEventListener('mouseout', function() {
+          bsCarousel.cycle();
+      });
+    </script>
+  </main>
 
   
   <!-- Comienzo del footer -->
