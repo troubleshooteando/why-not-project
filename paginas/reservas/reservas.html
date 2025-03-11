@@ -8,8 +8,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../main/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="">
   <link rel="icon" href="../../imagenes/logoWhyNot.png" type="image/png">
-
   <style>
     
     .form-container {
@@ -27,9 +27,9 @@
 
     .form-group {
         display: flex;
-        justify-content: center;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
         height: 10em;
     }
 
@@ -49,24 +49,59 @@
         width: 80%;
         max-width: 300px;
         text-align: center;
+        overflow: hidden;
+        font-weight: bold;
     }
 
     .whatsapp-btn {
-        background-color: #25D366;
+        background: linear-gradient(90deg, #7ae7a2 0%, #25D366 100%);
+    }
+
+    .whatsapp-btn::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #25D366 0%, #7ae7a2 100%);
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
     }
 
     .whatsapp-btn:hover {
-        background-color: #1EBE5D;
         transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     }
 
+    .whatsapp-btn:hover::before {
+        opacity: 1;
+    }
+   
+
     .call-btn {
-        background-color: #007BFF;
+        background: linear-gradient(90deg, #007BFF 0%, #0056b3 100%);
+    }
+
+    .call-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #0056b3 0%, #007BFF 100%);
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
     }
 
     .call-btn:hover {
-        background-color: #0056b3;
-        transform: translateY(-2px);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .call-btn:hover::before {
+      opacity: 1;
     }
   </style>
 
@@ -75,30 +110,30 @@
 
   <!-- Cabecera con el logo y menú -->
   <header class="container-fluid p-4 d-flex flex-column align-items-center" id="header">
+    
     <!-- Logo centrado en todas las pantallas -->
     <a href="../main/main.html" id="logo-link" class="d-flex justify-content-center mb-3">
       <img src="../../imagenes/logoWhyNot.png" alt="Logo Why Not" class="img-fluid" width="130" height="150">
     </a>
     
     <!-- Menú con columnas en pantallas grandes, en fila en pantallas pequeñas -->
-    <nav id="navbar" class="w-100">
-      <ul class="nav navbar-expand-lg justify-content-center">
-        <li class="nav-item">
-          <a href="../main/main.html" class="nav-link">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a href="../carta/carta.html" class="nav-link">Carta</a>
-        </li>
-        <li class="nav-item">
-          <a href="../historia/historia.html" class="nav-link">Historia</a>
-        </li>
-        <li class="nav-item">
-          <a href="../galeria/galeria.html" class="nav-link">Galería</a>
-        </li>
-        <li class="nav-item">
-          <a href="reservas.html" class="nav-link">Reservas</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg w-100" id="navbar">
+      <div class="container-fluid">
+        <button class="hamburger hamburger--minus navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item"><a href="../main/main.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="../carta/carta.html" class="nav-link">Carta</a></li>
+            <li class="nav-item"><a href="../historia/historia.html" class="nav-link">Historia</a></li>
+            <li class="nav-item"><a href="../galeria/galeria.html" class="nav-link">Galería</a></li>
+            <li class="nav-item"><a href="reservas.html" class="nav-link">Reservas</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   
