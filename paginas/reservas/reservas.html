@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../main/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
   <link rel="icon" href="../../imagenes/logoWhyNot.png" type="image/png">
   <style>
     
@@ -135,6 +135,28 @@
         </div>
       </div>
     </nav>
+    <!-- Script para manejar el botón hamburger -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Agregar clase is-active al botón hamburger cuando se hace clic
+        var hamburger = document.querySelector('.hamburger');
+        hamburger.addEventListener('click', function() {
+          hamburger.classList.toggle('is-active');
+        });
+
+        // Cerrar el menú cuando se hace clic en un enlace
+        var navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(function(navLink) {
+          navLink.addEventListener('click', function() {
+            var bsCollapse = bootstrap.Collapse.getInstance(document.querySelector('#navbarNav'));
+            if (bsCollapse) {
+              bsCollapse.hide();
+              hamburger.classList.remove('is-active');
+            }
+          });
+        });
+      });
+    </script>
   </header>
   
   <!-- Contenido de la página -->
