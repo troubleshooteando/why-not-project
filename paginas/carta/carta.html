@@ -11,53 +11,111 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
   <link rel="icon" href="../../imagenes/logoWhyNot.png" type="image/png">
 </head>
+
+<style>
+  /* Estilos personalizados para la carta */
+  .menu-category {
+   position: relative;
+   overflow: hidden;
+   margin-bottom: 30px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease;
+ }
+
+ .menu-category:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+ }
+
+ .menu-category img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   transition: transform 0.5s ease;
+ }
+
+ .menu-category:hover img {
+   transform: scale(1.05);
+ }
+
+ .menu-category-title {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+   padding: 15px;
+   font-weight: bold;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+ }
+
+ .section-title {
+   margin: 80px 0 40px;
+   text-align: center;
+   position: relative;
+ }
+
+ .section-title:after {
+   content: "";
+   position: absolute;
+   bottom: -15px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 80px;
+   height: 3px;
+   background-color: #e3aa5a;
+ }
+
+ .menu-item {
+   margin-bottom: 30px;
+   padding: 20px;
+   border-radius: 8px;
+   background-color: #fff;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+ }
+
+ .menu-item h4 {
+   margin-bottom: 10px;
+   color: #333;
+ }
+
+ .menu-item .price {
+   font-weight: bold;
+   color: #e3aa5a;
+ }
+
+ .menu-item .description {
+   color: #666;
+   font-size: 0.9rem;
+   margin-bottom: 0;
+ }
+
+ .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  display: flex;
+}
+
+.menu-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item .description {
+  flex-grow: 1;
+}
+ 
+</style>
+
 <body>
-
-  <style>
-
-    .carousel{
-      width: 100%;
-    }
-    
-    .carousel-item {
-        height: 400px;
-    }
-    
-    .carousel-image {
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .carousel-caption {
-        position: relative;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        text-align: left;
-        padding: 30px;
-        color: #333;
-        background-color: white;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    @media (max-width: 767.98px) {
-        .carousel-item {
-            height: auto;
-        }
-        
-        .carousel-image-container {
-            height: 600px;
-        }
-        
-        .carousel-caption {
-            padding: 20px;
-        }
-    }
-  </style>
-
   <!-- Cabecera con el logo y menú -->
   <header class="container-fluid p-4 d-flex flex-column align-items-center" id="header">
     
@@ -107,101 +165,188 @@
         });
       });
     </script>
-
-    
-
   </header>
-  
+
+
   <!-- Contenido de la página -->
   <main>
-    <div id="carruselBurgers" class="carousel py-5">
-      <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-          <!-- Indicadores -->
-          <div class="carousel-indicators">
-              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          
-          <!-- Diapositivas del carrusel -->
-          <div class="carousel-inner rounded shadow">
-              <!-- Diapositiva 1 -->
-              <div class="carousel-item active">
-                  <div class="row g-0">
-                      <div class="col-md-6 carousel-image-container">
-                          <img src="/api/placeholder/800/600" class="carousel-image w-100" alt="Imagen 1">
-                      </div>
-                      <div class="col-md-6">
-                          <div class="carousel-caption d-md-block">
-                              <h2>Título de la primera imagen</h2>
-                              <p>Esta es la descripción de la primera imagen. Aquí puedes colocar todo el texto que necesites para explicar la imagen que se muestra a la izquierda.</p>
-                              <button class="btn btn-primary">Más información</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              
-              <!-- Diapositiva 2 -->
-              <div class="carousel-item">
-                  <div class="row g-0">
-                      <div class="col-md-6 carousel-image-container">
-                          <img src="/api/placeholder/800/600" class="carousel-image w-100" alt="Imagen 2">
-                      </div>
-                      <div class="col-md-6">
-                          <div class="carousel-caption d-md-block">
-                              <h2>Título de la segunda imagen</h2>
-                              <p>Esta es la descripción de la segunda imagen. El carrusel es totalmente responsive y se adapta a diferentes tamaños de pantalla.</p>
-                              <button class="btn btn-primary">Más información</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              
-              <!-- Diapositiva 3 -->
-              <div class="carousel-item">
-                  <div class="row g-0">
-                      <div class="col-md-6 carousel-image-container">
-                          <img src="/api/placeholder/800/600" class="carousel-image w-100" alt="Imagen 3">
-                      </div>
-                      <div class="col-md-6">
-                          <div class="carousel-caption d-md-block">
-                              <h2>Título de la tercera imagen</h2>
-                              <p>Esta es la descripción de la tercera imagen. El diseño mantiene la imagen a la izquierda y el contenido a la derecha incluso cuando cambias de diapositiva.</p>
-                              <button class="btn btn-primary">Más información</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-          <!-- Controles del carrusel -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Siguiente</span>
-          </button>
+    <div class="container">
+      <h1 class="text-center my-5">Nuestra Carta</h1>
+      
+      <!-- Grid de categorías con imágenes enlazadas a secciones -->
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <a href="#entrantes" class="menu-category d-block">
+            <img src="../../imagenes/carta/entrantes.jpg" alt="Entrantes" class="img-fluid">
+            <div class="menu-category-title">Entrantes</div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#hamburguesas" class="menu-category d-block">
+            <img src="../../imagenes/carta/hamburguesas.jpg" alt="Hamburguesas" class="img-fluid">
+            <div class="menu-category-title">Hamburguesas</div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#carnes" class="menu-category d-block">
+            <img src="../../imagenes/carta/carnes.jpg" alt="Carnes" class="img-fluid">
+            <div class="menu-category-title">Carnes</div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#pastas" class="menu-category d-block">
+            <img src="../../imagenes/carta/pastas.jpg" alt="Pastas" class="img-fluid">
+            <div class="menu-category-title">Pastas</div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#postres" class="menu-category d-block">
+            <img src="../../imagenes/carta/postres.jpg" alt="Postres" class="img-fluid">
+            <div class="menu-category-title">Postres</div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#bebidas" class="menu-category d-block">
+            <img src="../../imagenes/carta/bebidas.jpg" alt="Bebidas" class="img-fluid">
+            <div class="menu-category-title">Bebidas</div>
+          </a>
+        </div>
       </div>
+      
+      <!-- Secciones de la carta -->
+      <section id="entrantes">
+        <h2 class="section-title">Entrantes</h2>
+        <div class="row">
+          <!-- Aquí van los elementos de entrantes -->
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Tabla de jamón</h4>
+              <p class="description">Selección de jamón ibérico de bellota con pan cristal y tomate rallado</p>
+              <p class="price">18,50 €</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Ensalada de burrata</h4>
+              <p class="description">Burrata fresca con tomates cherry, rúcula y reducción de balsámico</p>
+              <p class="price">12,50 €</p>
+            </div>
+          </div>
+          <!-- Añadir más elementos según sea necesario -->
+        </div>
+      </section>
+      
+      <section id="hamburguesas">
+        <h2 class="section-title">Hamburguesas</h2>
+        <div class="row">
+          <!-- Aquí van los elementos de hamburguesas -->
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Classic Burger</h4>
+              <p class="description">Carne 100% ternera, lechuga, tomate, queso cheddar y salsa especial</p>
+              <p class="price">12,50 €</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Why Not Burger</h4>
+              <p class="description">Nuestra hamburguesa especial con carne madurada, bacon crujiente, queso ahumado y cebolla caramelizada</p>
+              <p class="price">16,90 €</p>
+            </div>
+          </div>
+          <!-- Añadir más elementos según sea necesario -->
+        </div>
+      </section>
+      
+      <section id="carnes">
+        <h2 class="section-title">Carnes</h2>
+        <div class="row">
+          <!-- Aquí van los elementos de carnes -->
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Entrecot de vaca madurada</h4>
+              <p class="description">Entrecot de vaca madurada 30 días con patatas fritas y pimientos de Padrón</p>
+              <p class="price">24,50 €</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Secreto ibérico</h4>
+              <p class="description">Secreto ibérico a la plancha con patatas y salsa de la casa</p>
+              <p class="price">18,90 €</p>
+            </div>
+          </div>
+          <!-- Añadir más elementos según sea necesario -->
+        </div>
+      </section>
+      
+      <section id="pastas">
+        <h2 class="section-title">Pastas</h2>
+        <div class="row">
+          <!-- Aquí van los elementos de pastas -->
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Fettuccine al ragú</h4>
+              <p class="description">Fettuccine con ragú de ternera cocinado a fuego lento durante 6 horas</p>
+              <p class="price">14,50 €</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Tagliatelle con trufa</h4>
+              <p class="description">Tagliatelle fresco con mantequilla de trufa y parmesano rallado</p>
+              <p class="price">16,90 €</p>
+            </div>
+          </div>
+          <!-- Añadir más elementos según sea necesario -->
+        </div>
+      </section>
+      
+      <section id="postres">
+        <h2 class="section-title">Postres</h2>
+        <div class="row">
+          <!-- Aquí van los elementos de postres -->
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Cheesecake</h4>
+              <p class="description">Tarta de queso cremosa con coulis de frutos rojos</p>
+              <p class="price">6,50 €</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Coulant de chocolate</h4>
+              <p class="description">Coulant de chocolate con interior fundido y helado de vainilla</p>
+              <p class="price">7,90 €</p>
+            </div>
+          </div>
+          <!-- Añadir más elementos según sea necesario -->
+        </div>
+      </section>
+      
+      <section id="bebidas">
+        <h2 class="section-title">Bebidas</h2>
+        <div class="row">
+          <!-- Aquí van los elementos de bebidas -->
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Vino tinto Ribera del Duero</h4>
+              <p class="description">Botella de vino tinto Crianza D.O. Ribera del Duero</p>
+              <p class="price">22,00 €</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Cervezas artesanales</h4>
+              <p class="description">Selección de cervezas artesanales locales</p>
+              <p class="price">4,50 €</p>
+            </div>
+          </div>
+          <!-- Añadir más elementos según sea necesario -->
+        </div>
+      </section>
     </div>
-
-    <!-- Script para el carrusel -->
-    <script>
-      // Reanudar el carrusel cuando se detecta que está en segundo plano.
-      const myCarousel = document.getElementById('carrusel');
-      const bsCarousel = new bootstrap.Carousel(myCarousel);
-      
-      myCarousel.addEventListener('mouseover', function() {
-          bsCarousel.pause();
-      });
-      
-      myCarousel.addEventListener('mouseout', function() {
-          bsCarousel.cycle();
-      });
-    </script>
   </main>
-
   
   <!-- Comienzo del footer -->
   <div class="wrapper">

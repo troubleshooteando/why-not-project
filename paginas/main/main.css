@@ -162,7 +162,7 @@ button::-moz-focus-inner {
 #carrusel {
     box-shadow: 1rem 1.2rem 1.2rem;
     background-color: rgb(19, 19, 19);
-    width: 70%;
+    width: 65%;
     margin: 3em auto 0 auto;
 }
 
@@ -202,7 +202,7 @@ button::-moz-focus-inner {
 }
 
 #ubicacion {
-    width: 70%;
+    width: 65%;
     margin: 3em auto;
 }
 
