@@ -116,6 +116,29 @@
       </button>
     </div>
   
+    <!-- NUEVA SECCIÓN: Galería de Instagram -->
+    <div class="instagram-gallery-section">
+      <div class="instagram-header">
+        <a href="https://www.instagram.com/whynotburgercake/?hl=es"><img src="../../imagenes/logoWhyNot.png" alt="Why Not Instagram Profile"></a>
+        <div class="instagram-profile">
+          <h4><a href="https://www.instagram.com/whynotburgercake/" class="text-black bg-warning p-2" target="_blank">@whynotburgercake</a></h4>
+          <p>Síguenos en Instagram para ver más</p>
+        </div>
+      </div>
+      
+      <div id="instagram-gallery" class="instagram-gallery">
+        <!-- Indicador de carga inicial -->
+        <div class="loading-spinner" id="loading-spinner">
+          <div class="spinner"></div>
+          <p class="mt-3">Cargando publicaciones de Instagram...</p>
+        </div>
+      </div>
+      
+      <a href="https://www.instagram.com/whynotburgercake/" target="_blank" class="view-more-btn">
+        Ver más en Instagram <i class="fa-brands fa-instagram ms-2"></i>
+      </a>
+    </div>
+  
     <div id="ubicacion">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5000.0!2d-6.135661351003489!3d36.69510067354367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dc749ed3c3f9f%3A0x4d30b52338815424!2sWhy%20Not%20-%20Burger%20%26%20Cake!5e0!3m2!1sen!2ses!4v1741171737657!5m2!1sen!2ses" 
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -165,6 +188,73 @@
     });
   </script>
 
+  <!-- Script para la galería de Instagram -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Cargar el script de Instagram
+      const instagramScript = document.createElement('script');
+      instagramScript.src = 'https://www.instagram.com/embed.js';
+      instagramScript.async = true;
+      instagramScript.defer = true;
+      document.body.appendChild(instagramScript);
+      
+      // URLs de publicaciones de Instagram específicas para WhyNotBurgerCake
+      const instagramPosts = [
+        'https://www.instagram.com/p/C3KuJw7tyMW/?hl=es&img_index=1',
+        'https://www.instagram.com/p/DGnT5anqZ7J/?hl=es&img_index=1',
+      ];
+      
+      // Función para cargar los embebidos de Instagram
+      function loadInstagramEmbeds() {
+        const galleryElement = document.getElementById('instagram-gallery');
+        
+        // Eliminar el spinner de carga
+        const loadingSpinner = document.getElementById('loading-spinner');
+        if (loadingSpinner) {
+          loadingSpinner.remove();
+        }
+        
+        // Crear los elementos embebidos
+        instagramPosts.forEach(postUrl => {
+          const embedContainer = document.createElement('div');
+          embedContainer.className = 'instagram-embed';
+          
+          const blockquote = document.createElement('blockquote');
+          blockquote.className = 'instagram-media';
+          blockquote.setAttribute('data-instgrm-permalink', postUrl);
+          blockquote.setAttribute('data-instgrm-version', '14');
+          blockquote.setAttribute('data-instgrm-captioned', '');
+          blockquote.style.margin = '0';
+          blockquote.style.width = '100%';
+          
+          embedContainer.appendChild(blockquote);
+          galleryElement.appendChild(embedContainer);
+        });
+        
+        // Procesar los embebidos si el script ya está cargado
+        if (window.instgrm) {
+          window.instgrm.Embeds.process();
+        } else {
+          // Si el script no está listo, intentar procesar después de un tiempo
+          setTimeout(() => {
+            if (window.instgrm) {
+              window.instgrm.Embeds.process();
+            }
+          }, 2000);
+        }
+      }
+      
+      // Cargar los embebidos después de que el script de Instagram esté listo
+      instagramScript.onload = loadInstagramEmbeds;
+      
+      // Si hay algún problema con la carga, intentar cargar de todos modos después de un tiempo
+      setTimeout(() => {
+        const loadingSpinner = document.getElementById('loading-spinner');
+        if (loadingSpinner) {
+          loadInstagramEmbeds();
+        }
+      }, 5000);
+    });
+  </script>
 </body>
 </html>
-
