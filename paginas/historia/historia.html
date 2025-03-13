@@ -10,6 +10,99 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
   <link rel="icon" href="../../imagenes/logoWhyNot.png" type="image/png">
+
+  <style>
+    /* Ajustes para el contenedor principal */
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 100%;
+            padding: 0; /* Eliminar padding */
+        }
+
+        /* Ajustes para pantallas medianas y grandes */
+        @media (min-width: 768px) {
+            .form-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch; /* Estira los elementos verticalmente */
+            }
+            
+            .form-container .row {
+                width: 100%;
+                margin: 0; /* Eliminar márgenes */
+            }
+        }
+
+        /* Ajustes para la columna de la imagen */
+        .form-container .col-md-6:first-child {
+            padding: 0; /* Eliminar padding */
+        }
+
+        /* Estilos para la imagen */
+        .form-container .col-md-6:first-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantiene la proporción y cubre todo el espacio */
+            display: block; /* Elimina espacio extra debajo de la imagen */
+        }
+
+        /* Ajustes para la columna del contenido */
+        .form-container .col-md-6:last-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Añadir padding interior */
+        }
+
+        /* Estilos para el contenido */
+        .form-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: justify;
+            padding: 30px; /* Aumentar padding */
+            background: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Limitar el ancho máximo */
+            margin: 0 auto; /* Centrar horizontalmente */
+        }
+
+        /* Estilos para el título */
+        .form-content h3 {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos para los párrafos */
+        .form-content p {
+            font-size: 21px;
+            line-height: 1.6;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        /* Eliminar estilos sobrantes */
+        .form-wrapper,
+        .form-image {
+            display: none;
+        }
+
+        /* Ajustes para la estructura de la fila */
+        .row.align-items-center {
+            margin: 0;
+            width: 100%;
+        }
+  </style>
+
 </head>
 <body>
 
@@ -65,39 +158,24 @@
   </header>
   
   <!-- Contenido de la página -->
-  <div id="contenido" class="container mt-5">
-    <div class="row">
-      <div class="col-sm-6 col-md-12">
-        <h3>HISTORIA</h3>
-
-      </div>
-      <div class="col-sm-3 col-md-6">
-        <h3>Column 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-3 col-md-6">
-        <h3>Column 3</h3>        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="col-md-3">
-        <p>Dignissimos, adipisci! Vitae, voluptatem architecto!</p>
-      </div>
-      <div class="col-md-3">
-        <p>Commodi iure quasi ad modi?</p>
-      </div>
-      <div class="col-md-3">
-        <p>Quod quis suscipit enim tenetur.</p>
+  <main>
+    <div class="form-container">
+      <div class="row align-items-center w-100 m-0">
+        <div class="col-md-6 p-0">
+          <img src="../../imagenes/why-not-local.jpg" alt="Imagen de historia" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <div class="form-content">
+            <h3 class="titulos-main">NUESTRA HISTORIA</h3>
+            <p>Why Not nació el 9 de noviembre de 2023 en Jerez de la Frontera, en la Plaza de Nicaragua, en la zona de San Joaquín. Fue el sueño de dos socios, Diego y José, quienes compartían la pasión por la gastronomía y la idea de crear un lugar único donde las hamburguesas y las tartas fueran protagonistas.</p>
+            <p>Desde el primer día, Why Not se distinguió por ofrecer hamburguesas artesanales de alta calidad, incluyendo opciones veganas, junto con deliciosas tartas caseras. La combinación de ingredientes frescos, recetas innovadoras y un ambiente acogedor conquistó rápidamente a los jerezanos y visitantes.</p>
+            <p>El esfuerzo y la dedicación dieron sus frutos, y en 2025, Why Not alcanzó un hito importante: su hamburguesa estrella, la He-Man Smash, fue galardonada con el prestigioso premio Saborea de Andalucía, reconociéndola como la mejor hamburguesa artesanal de Andalucía.</p>
+            <p>Hoy, Why Not sigue creciendo, manteniendo su esencia y el compromiso de ofrecer sabores inigualables a quienes buscan una experiencia gastronómica diferente. Porque aquí, la única pregunta es: <b>why not?</b></p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
   
   <!-- footer -->
