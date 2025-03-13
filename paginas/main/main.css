@@ -217,7 +217,6 @@ button::-moz-focus-inner {
 /* FOOTER */
 #footer {
     background-color: var(--color-logo);
-    margin-top: 1em;
     color: var(--color-logo);
 }
 
