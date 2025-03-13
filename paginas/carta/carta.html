@@ -14,6 +14,12 @@
 
 <style>
   /* Estilos personalizados para la carta */
+
+  #tituloCarta{
+    border-radius: 15px;
+    border: 4px black solid;
+  }
+
   .menu-category {
    position: relative;
    overflow: hidden;
@@ -170,52 +176,70 @@
 
   <!-- Contenido de la página -->
   <main>
-    <div class="container">
-      <h1 class="text-center my-5">Nuestra Carta</h1>
+    <div class="container py-5">
+      <h1 id="tituloCarta" class="text-center my-5 bg-warning p-4 w-50 mx-auto">Nuestra Carta</h1>
       
       <!-- Grid de categorías con imágenes enlazadas a secciones -->
       <div class="row">
         <div class="col-md-4 col-sm-6">
+          <a href="#patatas" class="menu-category d-block">
+            <img src="../../imagenes/patatasCarta.jpeg" alt="Patatas" class="img-fluid">
+            <div class="menu-category-title">Patatas</div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
           <a href="#entrantes" class="menu-category d-block">
-            <img src="../../imagenes/carta/entrantes.jpg" alt="Entrantes" class="img-fluid">
+            <img src="../../imagenes/entrantesCarta.jpeg" alt="Entrantes" class="img-fluid">
             <div class="menu-category-title">Entrantes</div>
           </a>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="#hamburguesas" class="menu-category d-block">
-            <img src="../../imagenes/carta/hamburguesas.jpg" alt="Hamburguesas" class="img-fluid">
-            <div class="menu-category-title">Hamburguesas</div>
+          <a href="#especialidades" class="menu-category d-block">
+            <img src="../../imagenes/especialidadCarta.jpeg" alt="Especialidades" class="img-fluid">
+            <div class="menu-category-title">Especialidades</div>
           </a>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="#carnes" class="menu-category d-block">
-            <img src="../../imagenes/carta/carnes.jpg" alt="Carnes" class="img-fluid">
-            <div class="menu-category-title">Carnes</div>
+          <a href="#burgers" class="menu-category d-block">
+            <img src="../../imagenes/burgerCarta.jpeg" alt="Burgers" class="img-fluid">
+            <div class="menu-category-title">Burgers</div>
           </a>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="#pastas" class="menu-category d-block">
-            <img src="../../imagenes/carta/pastas.jpg" alt="Pastas" class="img-fluid">
-            <div class="menu-category-title">Pastas</div>
+          <a href="#notDog" class="menu-category d-block">
+            <img src="../../imagenes/hotdogCarta.jpeg" alt="Not Dog" class="img-fluid">
+            <div class="menu-category-title">Not Dog</div>
           </a>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="#postres" class="menu-category d-block">
-            <img src="../../imagenes/carta/postres.jpg" alt="Postres" class="img-fluid">
-            <div class="menu-category-title">Postres</div>
+          <a href="#vegan" class="menu-category d-block">
+            <img src="../../imagenes/boniatosCarta.jpeg" alt="Vegan" class="img-fluid">
+            <div class="menu-category-title">Vegan</div>
           </a>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="#bebidas" class="menu-category d-block">
-            <img src="../../imagenes/carta/bebidas.jpg" alt="Bebidas" class="img-fluid">
-            <div class="menu-category-title">Bebidas</div>
+          <a href="#extras" class="menu-category d-block">
+            <img src="../../imagenes/extrasCarta.jpeg" alt="Extras" class="img-fluid">
+            <div class="menu-category-title">Extras</div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#powerUp" class="menu-category d-block">
+            <img src="../../imagenes/powerUpCarta.jpeg" alt="Power up!" class="img-fluid">
+            <div class="menu-category-title">Power up!</div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#cakes" class="menu-category d-block">
+            <img src="../../imagenes/tartaCarta.webp" alt="Cakes" class="img-fluid">
+            <div class="menu-category-title">Cakes</div>
           </a>
         </div>
       </div>
       
       <!-- Secciones de la carta -->
-      <section id="entrantes">
-        <h2 class="section-title">Entrantes</h2>
+      <section id="patatas">
+        <h2 class="section-title">Patatas</h2>
         <div class="row">
           <!-- Aquí van los elementos de entrantes -->
           <div class="col-md-6">
@@ -236,8 +260,8 @@
         </div>
       </section>
       
-      <section id="hamburguesas">
-        <h2 class="section-title">Hamburguesas</h2>
+      <section id="entrantes">
+        <h2 class="section-title">Entrantes</h2>
         <div class="row">
           <!-- Aquí van los elementos de hamburguesas -->
           <div class="col-md-6">
@@ -258,8 +282,8 @@
         </div>
       </section>
       
-      <section id="carnes">
-        <h2 class="section-title">Carnes</h2>
+      <section id="especialidades">
+        <h2 class="section-title">Especialidades</h2>
         <div class="row">
           <!-- Aquí van los elementos de carnes -->
           <div class="col-md-6">
@@ -280,8 +304,8 @@
         </div>
       </section>
       
-      <section id="pastas">
-        <h2 class="section-title">Pastas</h2>
+      <section id="notDog">
+        <h2 class="section-title">Not Dog</h2>
         <div class="row">
           <!-- Aquí van los elementos de pastas -->
           <div class="col-md-6">
@@ -302,8 +326,8 @@
         </div>
       </section>
       
-      <section id="postres">
-        <h2 class="section-title">Postres</h2>
+      <section id="vegan">
+        <h2 class="section-title">Vegan</h2>
         <div class="row">
           <!-- Aquí van los elementos de postres -->
           <div class="col-md-6">
@@ -324,8 +348,52 @@
         </div>
       </section>
       
-      <section id="bebidas">
-        <h2 class="section-title">Bebidas</h2>
+      <section id="extras">
+        <h2 class="section-title">Extras</h2>
+        <div class="row">
+          <!-- Aquí van los elementos de bebidas -->
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Vino tinto Ribera del Duero</h4>
+              <p class="description">Botella de vino tinto Crianza D.O. Ribera del Duero</p>
+              <p class="price">22,00 €</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Cervezas artesanales</h4>
+              <p class="description">Selección de cervezas artesanales locales</p>
+              <p class="price">4,50 €</p>
+            </div>
+          </div>
+          <!-- Añadir más elementos según sea necesario -->
+        </div>
+      </section>
+
+      <section id="powerUp">
+        <h2 class="section-title">Power Up!</h2>
+        <div class="row">
+          <!-- Aquí van los elementos de bebidas -->
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Vino tinto Ribera del Duero</h4>
+              <p class="description">Botella de vino tinto Crianza D.O. Ribera del Duero</p>
+              <p class="price">22,00 €</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-item">
+              <h4>Cervezas artesanales</h4>
+              <p class="description">Selección de cervezas artesanales locales</p>
+              <p class="price">4,50 €</p>
+            </div>
+          </div>
+          <!-- Añadir más elementos según sea necesario -->
+        </div>
+      </section>
+
+      <section id="cakes">
+        <h2 class="section-title">Cakes</h2>
         <div class="row">
           <!-- Aquí van los elementos de bebidas -->
           <div class="col-md-6">
