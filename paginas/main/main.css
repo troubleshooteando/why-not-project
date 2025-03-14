@@ -224,7 +224,7 @@ button::-moz-focus-inner {
     margin-bottom: 20px;
     background-color: rgb(255, 255, 255);
     justify-content: center;
-    gap: 15px; /* Añade espacio entre el logo y el texto */
+    gap: 15px; 
 }
 
 .instagram-profile {
@@ -257,7 +257,7 @@ button::-moz-focus-inner {
     padding: 8px 15px;
     border-radius: 12px;
     display: inline-block;
-    margin-top: 10px; /* Añade margen superior para bajar un poco */
+    margin-top: 10px; 
 }
 
 .instagram-profile h4 a:hover {
