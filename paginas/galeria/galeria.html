@@ -12,7 +12,6 @@
   <link rel="icon" href="../../imagenes/logoWhyNot.png" type="image/png">
 
   <style>
-    /* Estilos para el slider de imágenes */
     .slider-container {
       position: relative;
       width: 100%;
@@ -125,7 +124,7 @@
       <img src="../../imagenes/logoWhyNot.png" alt="Logo Why Not" class="img-fluid" width="130" height="150">
     </a>
     
-    <!-- Menú con columnas en pantallas grandes, en fila en pantallas pequeñas -->
+    <!-- Menú con columnas en pantallas grandes -->
     <nav class="navbar navbar-expand-lg w-100" id="navbar">
       <div class="container-fluid">
         <button class="hamburger hamburger--minus navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -145,7 +144,7 @@
       </div>
     </nav>
 
-    <!-- Script para manejar el botón hamburger -->
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var hamburger = document.querySelector('.hamburger');
@@ -153,7 +152,6 @@
           hamburger.classList.toggle('is-active');
         });
 
-        // Cerrar el menú cuando se hace clic en un enlace
         var navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(function(navLink) {
           navLink.addEventListener('click', function() {
@@ -173,14 +171,15 @@
     <!-- Sección del slider de imágenes destacadas -->
     <section class="slider-section">
       <div class="container">
-        <h1 class="slider-title">Nuestros Momentos Especiales</h1>
+        <h1 class="slider-title">Galería Why Not</h1>
         
         <div class="slider-container">
           <div class="images-container" id="slider-images">
-            <img src="/api/placeholder/800/450" alt="Hamburguesa gourmet" class="slider-img">
-            <img src="/api/placeholder/800/450" alt="Tarta de chocolate" class="slider-img">
-            <img src="/api/placeholder/800/450" alt="Local Why Not" class="slider-img">
-            <img src="/api/placeholder/800/450" alt="Eventos especiales" class="slider-img">
+            <img src="../../imagenes/burguersypatatas.png" alt="Hamburguesa gourmet" class="slider-img">
+            <img src="../../imagenes/burguers.png" alt="GoHome" class="slider-img">
+            <img src="../../imagenes/tartalotus.png" alt="Tarta de chocolate" class="slider-img">
+            <img src="../../imagenes/cookies.png" alt="Eventos especiales" class="slider-img">
+            <img src="../../imagenes/imagenLocal.jpg" alt="Eventos especiales" class="slider-img">
           </div>
         </div>
         
@@ -189,6 +188,7 @@
           <div class="slider-dot" data-index="1"></div>
           <div class="slider-dot" data-index="2"></div>
           <div class="slider-dot" data-index="3"></div>
+          <div class="slider-dot" data-index="4"></div>
         </div>
       </div>
     </section>
@@ -196,27 +196,26 @@
     <!-- Sección de galería de imágenes -->
     <section class="gallery-section">
       <div class="container">
-        <h2 class="slider-title">Galería Why Not</h2>
-        <p class="gallery-subtitle">Descubre la esencia de Why Not Burger & Cake a través de nuestras imágenes</p>
+        <h2 class="gallery-subtitle">Descubre la esencia de Why Not Burger & Cake a través de nuestras imágenes</h2>
         
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="/api/placeholder/400/250" alt="Hamburguesa clásica" class="gallery-img">
+            <img src="../../imagenes/GOHOME.jpg" alt="GOHOME" class="gallery-img">
           </div>
           <div class="gallery-item">
-            <img src="/api/placeholder/400/250" alt="Tarta de cumpleaños" class="gallery-img">
+            <img src="../../imagenes/hamurgesaMain.jpg" alt="Tarta de la abuela" class="gallery-img">
           </div>
           <div class="gallery-item">
-            <img src="/api/placeholder/400/250" alt="Interior del restaurante" class="gallery-img">
+            <img src="../../imagenes/burguerClasica.png" alt="Hamburguesa clásica" class="gallery-img">
           </div>
           <div class="gallery-item">
-            <img src="/api/placeholder/400/250" alt="Plato gourmet" class="gallery-img">
+            <img src="../../imagenes/TartaPistacho.jpg" alt="Tarta de pistacho" class="gallery-img">
           </div>
           <div class="gallery-item">
-            <img src="/api/placeholder/400/250" alt="Postre especial" class="gallery-img">
+            <img src="../../imagenes/tartadequeso.png" alt="Tarta de queso" class="gallery-img">
           </div>
           <div class="gallery-item">
-            <img src="/api/placeholder/400/250" alt="Evento privado" class="gallery-img">
+            <img src="../../imagenes/tartaAbuela.png" alt="Tarta de la abuela" class="gallery-img">
           </div>
         </div>
       </div>
@@ -251,16 +250,14 @@
     </footer>
   </div>
 
-  <!-- Script para el slider de imágenes -->
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Código para el slider de imágenes
       let currentSlide = 0;
       const slides = document.querySelectorAll('#slider-images img');
       const dots = document.querySelectorAll('.slider-dot');
       const totalSlides = slides.length;
       
-      // Función para mostrar un slide específico
       function showSlide(index) {
         if (index < 0) {
           currentSlide = totalSlides - 1;
@@ -269,12 +266,11 @@
         } else {
           currentSlide = index;
         }
-        
-        // Actualizar posición del slider
+
         const sliderContainer = document.getElementById('slider-images');
         sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
         
-        // Actualizar dots activos
+
         dots.forEach((dot, i) => {
           if (i === currentSlide) {
             dot.classList.add('active');
@@ -284,7 +280,7 @@
         });
       }
       
-      // Configurar evento de clic en los dots
+
       dots.forEach(dot => {
         dot.addEventListener('click', function() {
           const slideIndex = parseInt(this.getAttribute('data-index'));
@@ -292,7 +288,6 @@
         });
       });
       
-      // Cambio automático de slides cada 5 segundos
       setInterval(() => {
         showSlide(currentSlide + 1);
       }, 5000);
